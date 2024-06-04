@@ -37,17 +37,17 @@ def process_audio(path):
 
     return result
 
-result = process_audio('sample_audio\\merry_go_round_test.mp3')
+result = process_audio('sample_audio\Moment_Musicaux_No4.mp3')
 
-df = pd.DataFrame(result, columns=['merry_go_round_test'])
+df = pd.DataFrame(result, columns=['Moment_Musicaux_No4'])
 df = df.round(2)
-df.to_csv('merry_go_round_test.csv', index=False)
+df.to_csv('Moment_Musicaux_No4.csv', index=False)
 
-# plt.figure(figsize=(20, 10))
-# plt.plot(db)
+plt.figure(figsize=(20, 10))
+plt.plot(db)
 
-# for peak in filtered_peaks:
-#     plt.scatter(peak, db[peak], color='red')
+for peak in filtered_peaks:
+    plt.scatter(peak, db[peak], color='red')
 
-# plt.savefig('merry_go_round_test')
-# plt.show()
+plt.savefig('Moment_Musicaux_No4')
+plt.show()
